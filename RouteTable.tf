@@ -3,7 +3,7 @@ resource "aws_route_table" "Project_RT" {
 
   route = [
         {
-          cidr_block = var.input_route
+          cidr_block = "0.0.0.0/0"
           gateway_id = aws_internet_gateway.Project_GW.id
         },
         {
@@ -16,7 +16,4 @@ resource "aws_route_table" "Project_RT" {
   tags = {
     Name = "Project_RT"
   }
-}
-variable "input_route" { 
-  description ="which traffic will the gateway allow"
 }
