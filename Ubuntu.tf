@@ -8,7 +8,7 @@ resource "aws_instance" "Project_Ubuntu" {
         network_interface_id=aws_network_interface.Project_NIC.id
     }
        tags = {
-          Name="Project_Ubuntu_WebServer"
+          Name="Project_Ubuntu_WebServer1"
         } 
 
     user_data = <<EOF
