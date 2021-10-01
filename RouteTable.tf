@@ -8,7 +8,7 @@ resource "aws_route_table" "Project_RT" {
         },
         {
           ipv6_cidr_block        = "::/0"
-          egress_only_gateway_id=aws_egress_only_internet_gateway.Project_GW.id
+          egress_only_gateway_id=aws_internet_gateway.Project_GW.id
         }
       ]
 
