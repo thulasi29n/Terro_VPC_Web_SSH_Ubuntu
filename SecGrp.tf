@@ -14,18 +14,18 @@ resource "aws_security_group" "Project_SG" {
     ingress{
      
       description      = "HTTP"
-      from_port        = var.SG_HTTP_PORT
-      to_port          = var.SG_HTTP_PORT
-      protocol         = var.SG_PROTOCOL
-      cidr_blocks      = var.SG_CIDR
+      from_port        = 80
+      to_port          = 80
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
     }
     ingress{
      
       description      = "SSH"
-      from_port        = var.SG_SSHPORT
-      to_port          = var.SG_SSHPORT
-      protocol         = var.SG_PROTOCOL
-      cidr_blocks      = var.SG_CIDR
+      from_port        = 22
+      to_port          = 22
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
     }
   
 
