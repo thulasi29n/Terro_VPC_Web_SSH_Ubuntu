@@ -43,18 +43,3 @@ resource "aws_security_group" "Project_SG" {
     Name = "Project_SG"
   }
 }
-
-variable "SG_HTTP_PORT" {
-  
-}
-
-variable "SG_SSHPORT" {
-  
-}
-variable "SG_PROTOCOL" {
-  
-}
-
-variable "SG_CIDR" {
-  
-}
